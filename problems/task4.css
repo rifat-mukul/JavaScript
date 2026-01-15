@@ -1,0 +1,24 @@
+#angry{
+    height: 50px;
+    width: 50px;
+    background-color: aquamarine;
+}
+
+#sad{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(10, 248, 168);
+}
+
+.normal {
+    background-color: white;
+    color: black;
+}
+.angry {
+    background-color: red;
+    color: white;
+}
+.sad {
+    background-color: blue;
+    color: white;
+}

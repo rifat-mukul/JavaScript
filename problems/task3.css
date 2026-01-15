@@ -1,0 +1,14 @@
+.container {
+    background-color: blueviolet;
+    text-decoration: solid;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
