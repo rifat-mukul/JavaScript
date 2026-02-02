@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Tic-Tac-Toe | By Rifat Mukul</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="winner-overlay" class="overlay hide">
+        <div class="msg-container">
+            <h1 id="winner-text">Winner!</h1>
+            <button id="new-game-btn">Play Again</button>
+            <p class="dev-credit">Developed by <a href="https://github.com/rifat-mukul" target="_blank">Rifat Mukul</a></p>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="header">
+                <h1>Tic-Tac-Toe</h1>
+                <p id="status-msg">Player <span id="player-turn">O</span>'s Turn</p>
+            </div>
+            
+            <div class="game-grid">
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+                <button class="box"></button>
+            </div>
+
+            <button id="reset-btn">Reset Match</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 | <a href="https://github.com/rifat-mukul" target="_blank">rifat-mukul</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

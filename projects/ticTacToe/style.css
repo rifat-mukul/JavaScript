@@ -1,0 +1,147 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --accent-o: #00f2ff;
+    --accent-x: #ff007a;
+    --text-main: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-main);
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, var(--accent-o), var(--accent-x));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+}
+
+#status-msg {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+/* The Board Grid */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 12px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 24px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    color: white;
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: scale(1.05);
+}
+
+.o-style { color: var(--accent-o); text-shadow: 0 0 15px var(--accent-o); }
+.x-style { color: var(--accent-x); text-shadow: 0 0 15px var(--accent-x); }
+
+/* Control Buttons */
+#reset-btn {
+    margin-top: 25px;
+    padding: 10px 30px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#reset-btn:hover {
+    background: white;
+    color: var(--bg-color);
+}
+
+/* Winner Overlay Screen */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 0.4s ease;
+}
+
+.hide { display: none; opacity: 0; }
+
+.msg-container {
+    text-align: center;
+    animation: popIn 0.5s ease-out;
+}
+
+#winner-text { font-size: 4.5rem; margin-bottom: 10px; }
+
+#new-game-btn {
+    padding: 15px 45px;
+    font-size: 1.3rem;
+    background: linear-gradient(45deg, var(--accent-o), var(--accent-x));
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 242, 255, 0.3);
+}
+
+/* Footer & Credits */
+footer {
+    position: absolute;
+    bottom: 20px;
+    opacity: 0.6;
+}
+
+footer a, .dev-credit a {
+    color: var(--accent-o);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
